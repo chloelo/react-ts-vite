@@ -1,15 +1,18 @@
+import { useContext } from "react";
 import { LevelContext } from "../contexts/LevelContext";
 
 interface SectionProps {
   children: React.ReactNode;
-  level: number
 }
 
-export default function Section({ level, children }: SectionProps) {
+export default function Section({ children }: SectionProps) {
+  // useContext會去找最近的父層provider的值是多少
+  const level = useContext(LevelContext) 
+  
   return (
     <section className="section">
-      {/* Step 3: Provide the context  */}
-      <LevelContext.Provider value={level}>
+      {/*   */}
+      <LevelContext.Provider value={level + 1}>
         {children}
       </LevelContext.Provider>
     </section>
