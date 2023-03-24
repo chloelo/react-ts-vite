@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import { LevelContext } from "../contexts/LevelContext";
+
 interface HeaderProps  {
-  level: number;
   children: React.ReactNode
 }
 
-export default function Heading({ level, children }: HeaderProps) {
+export default function Heading({ children }: HeaderProps) {
+  // Step 2: Use the context
+  const level = useContext(LevelContext)
+
   switch (level) {
     case 1:
       return <h1>{children}</h1>;

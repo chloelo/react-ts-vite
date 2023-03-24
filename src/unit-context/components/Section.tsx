@@ -1,11 +1,17 @@
+import { LevelContext } from "../contexts/LevelContext";
+
 interface SectionProps {
-  children: React.ReactNode
+  children: React.ReactNode;
+  level: number
 }
 
-export default function Section({ children }: SectionProps) {
+export default function Section({ level, children }: SectionProps) {
   return (
     <section className="section">
-      {children}
+      {/* Step 3: Provide the context  */}
+      <LevelContext.Provider value={level}>
+        {children}
+      </LevelContext.Provider>
     </section>
   );
 }
