@@ -16,6 +16,9 @@ function useTime() {
 export default function App() {
   const time = useTime();
   return (
-    <Clock time={time} />
+    <>
+      <h1>Challenge 1 of 3: Fix a broken clock</h1>
+      <Clock time={time} />
+    </>
   );
 }

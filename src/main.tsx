@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './001-DescribingtheUI/KeepingComponentsPure/Challenge1'
+import App from './002-AddingInteractivity/05-QueueingASeriesOfStateUpdates/Challenge2'
 // import './App.css'
 
 

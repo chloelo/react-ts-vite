@@ -1,5 +1,15 @@
 
-const drinks = {
+type Drink = {
+  plant: string,
+  caffeine: string,
+  age: string,
+};
+type Drinks = {
+  tea: Drink,
+  coffee: Drink,
+}
+
+const drinks: Drinks = {
   tea: {
     plant: 'leaf',
     caffeine: '15–70 mg/cup',
@@ -11,9 +21,10 @@ const drinks = {
     age: '1,000+ years'
   }
 }
+type Drinks2 = typeof drinks;
 // type keyNames = keyof typeof drinks
 
-function Drink({ name }: { name:  keyof typeof drinks }) {
+function Drink({ name }: { name:  keyof Drinks2 }) {
   const info = drinks[name]
   return (
     <section>
