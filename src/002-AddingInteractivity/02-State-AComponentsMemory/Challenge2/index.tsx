@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { ChangeEventProps } from '../../../Types'
+import { ChangeEventInputProps } from '../../../Types'
 export default function Form() {
   // let firstName = '';
   // let lastName = '';
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
-  function handleFirstNameChange(e: ChangeEventProps) {
+  function handleFirstNameChange(e: ChangeEventInputProps) {
     // firstName = e.target.value;
     setFirstName(e.target.value)
   }
 
-  function handleLastNameChange(e: ChangeEventProps) {
+  function handleLastNameChange(e: ChangeEventInputProps) {
     // lastName = e.target.value;
     setLastName(e.target.value)
   }
