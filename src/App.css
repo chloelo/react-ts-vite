@@ -40,14 +40,49 @@
 .read-the-docs {
   color: #888;
 } */
-body {
+/* body {
   background: #2a2a2a;
   color: #fff;
 }
 
 .section {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #aaa;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+} */
+
+li {
+  list-style: none;
+  margin: 10px 15px;
+}
+ul{
+  display: flex;
+}
+/* 未連結 */
+a:link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #646cff;
+}
+
+/* 已連結過 */
+a:visited {
+  color: #a3a3a3;
+}
+
+/* 滑鼠移至連結 */
+a:hover {
+  color: #1ace92;
+}
+
+/* 選擇的連結 */
+a:active {
+  color: #24244d;
+  
+}
+
+nav a.active {
+  color: rgb(113, 42, 122);
+  text-decoration: underline;
 }
