@@ -34,7 +34,7 @@ export default function Canvas() {
     })
   }
 
-  function handleColorChange(e: ChangeEventSelectProps) {
+  function handleColorChange(e: React.ChangeEvent<HTMLSelectElement>) {
     updateShape(draft => {
       draft.color = e.target.value
 

@@ -19,9 +19,9 @@ export default function Box({
     lastCoordinates,
     setLastCoordinates
   ] = useState<BackgroundProps | null>(null);
-
   function handlePointerDown(e: PointerEventDivProps) {
     // e.target.setPointerCapture(e.pointerId);
+    // e.currentTarget.setPointerCapture(e.pointerId);
     (e.target as HTMLDivElement).setPointerCapture(e.pointerId);
     setLastCoordinates({
       x: e.clientX,
