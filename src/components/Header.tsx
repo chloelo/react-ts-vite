@@ -8,6 +8,9 @@ const Header = () => {
           <NavLink to="/">HOME</NavLink>
         </li>
         <li>
+          <NavLink to="/chapters">Chapters</NavLink>
+        </li>
+        <li>
           <NavLink  to="/page1">PAGE1</NavLink>
         </li>
         <li>
