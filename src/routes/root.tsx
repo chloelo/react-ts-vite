@@ -1,15 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import {
-  Ch01_Layout,
-  Ch01_Sec01_Layout,
-  Ch01_Sec02_Layout,
-  Ch01_Sec03_Layout,
-  Ch01_Sec04_Layout,
-  Ch02_Layout,
-  Ch02_Sec01_Layout,
-  RootLayout,
-} from '../layouts';
+// import {
+//   Ch01_Layout,
+//   Ch02_Layout,
+// } from '../layouts/ChapterLayoutTemplate';
 import {
   Ch01_Sec01_01,
   Ch01_Sec01_02,
@@ -18,7 +12,34 @@ import {
   Ch01_Sec02_01,
   Ch01_Sec03_01,
   Ch01_Sec04_01,
-} from '../views/chapters';
+  Ch01_Sec04_02,
+  Ch01_Sec04_03,
+  Ch01_Sec05_01,
+  Ch01_Sec05_02,
+  Ch01_Sec05_03,
+  Ch01_Sec06_01,
+  Ch01_Sec06_02,
+  Ch01_Sec06_03,
+  Ch01_Sec07_01,
+  Ch01_Sec07_02,
+  Ch01_Sec07_03,
+  Ch01_Sec07_04,
+} from '../chapters';
+import {
+  Ch01_Layout,
+  Ch01_Sec01,
+  Ch01_Sec02,
+  Ch01_Sec03,
+  Ch01_Sec04,
+  Ch01_Sec05,
+  Ch01_Sec06,
+  Ch01_Sec07,
+  Ch02_Layout,
+  Ch02_Sec01,
+  Ch03_Layout,
+  Ch04_Layout,
+  RootLayout,
+} from '../layouts';
 import NotFound from '../views/NotFound';
 
 const router = createBrowserRouter(
@@ -38,12 +59,8 @@ const router = createBrowserRouter(
           children: [
             {
               path: 'sec01',
-              element: <Ch01_Sec01_Layout />,
+              element: <Ch01_Sec01 />,
               children: [
-                {
-                  path: '',
-                  element: <Ch01_Sec01_01 />,
-                },
                 {
                   path: '01',
                   element: <Ch01_Sec01_01 />,
@@ -64,12 +81,8 @@ const router = createBrowserRouter(
             },
             {
               path: 'sec02',
-              element: <Ch01_Sec02_Layout />,
+              element: <Ch01_Sec02 />,
               children: [
-                {
-                  path: '',
-                  element: <Ch01_Sec02_01 />,
-                },
                 {
                   path: '01',
                   element: <Ch01_Sec02_01 />,
@@ -78,12 +91,8 @@ const router = createBrowserRouter(
             },
             {
               path: 'sec03',
-              element: <Ch01_Sec03_Layout />,
+              element: <Ch01_Sec03 />,
               children: [
-                {
-                  path: '',
-                  element: <Ch01_Sec03_01 />,
-                },
                 {
                   path: '01',
                   element: <Ch01_Sec03_01 />,
@@ -92,15 +101,77 @@ const router = createBrowserRouter(
             },
             {
               path: 'sec04',
-              element: <Ch01_Sec04_Layout />,
+              element: <Ch01_Sec04 />,
               children: [
-                {
-                  path: '',
-                  element: <Ch01_Sec04_01 />,
-                },
                 {
                   path: '01',
                   element: <Ch01_Sec04_01 />,
+                },
+                {
+                  path: '02',
+                  element: <Ch01_Sec04_02 />,
+                },
+                {
+                  path: '03',
+                  element: <Ch01_Sec04_03 />,
+                },
+              ],
+            },
+            {
+              path: 'sec05',
+              element: <Ch01_Sec05 />,
+              children: [
+                {
+                  path: '01',
+                  element: <Ch01_Sec05_01 />,
+                },
+                {
+                  path: '02',
+                  element: <Ch01_Sec05_02 />,
+                },
+                {
+                  path: '03',
+                  element: <Ch01_Sec05_03 />,
+                },
+              ],
+            },
+            {
+              path: 'sec06',
+              element: <Ch01_Sec06 />,
+              children: [
+                {
+                  path: '01',
+                  element: <Ch01_Sec06_01 />,
+                },
+                {
+                  path: '02',
+                  element: <Ch01_Sec06_02 />,
+                },
+                {
+                  path: '03',
+                  element: <Ch01_Sec06_03 />,
+                },
+              ],
+            },
+            {
+              path: 'sec07',
+              element: <Ch01_Sec07 />,
+              children: [
+                {
+                  path: '01',
+                  element: <Ch01_Sec07_01 />,
+                },
+                {
+                  path: '02',
+                  element: <Ch01_Sec07_02 />,
+                },
+                {
+                  path: '03',
+                  element: <Ch01_Sec07_03 />,
+                },
+                {
+                  path: '04',
+                  element: <Ch01_Sec07_04 />,
                 },
               ],
             },
@@ -112,7 +183,47 @@ const router = createBrowserRouter(
           children: [
             {
               path: 'sec01',
-              element: <Ch02_Sec01_Layout />,
+              element: <Ch02_Sec01/>,
+              children: [
+                {
+                  path: '01',
+                  element: <Ch01_Sec01_01 />,
+                },
+              ],
+            },
+            {
+              path: '02',
+              element: <Ch01_Sec01_02 />,
+            },
+          ],
+        },
+        {
+          path: 'ch03',
+          element: <Ch03_Layout />,
+          children: [
+            {
+              path: 'sec01',
+              element: <Ch02_Sec01/>,
+              children: [
+                {
+                  path: '01',
+                  element: <Ch01_Sec01_01 />,
+                },
+              ],
+            },
+            {
+              path: '02',
+              element: <Ch01_Sec01_02 />,
+            },
+          ],
+        },
+        {
+          path: 'ch04',
+          element: <Ch04_Layout />,
+          children: [
+            {
+              path: 'sec01',
+              element: <Ch02_Sec01/>,
               children: [
                 {
                   path: '01',
