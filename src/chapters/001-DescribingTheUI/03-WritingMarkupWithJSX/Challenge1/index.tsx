@@ -65,6 +65,8 @@ export default function Bio() {
         challengeIdx={0}
         challengeTxt={challenge}
         answer={ans}
+        challengeIFrameTitle='hungry-pascal-xff8yf'
+        solutionIFrameTitle='wizardly-ritchie-8e7k6s'
       >
         <div className='challenge01-03-wrap'>
           <div className='intro'>

@@ -1,29 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-// import {
-//   Ch01_Layout,
-//   Ch02_Layout,
-// } from '../layouts/ChapterLayoutTemplate';
 import {
   Ch01_Sec01_01,
   Ch01_Sec01_02,
-  Ch01_Sec01_03,
-  Ch01_Sec01_04,
-  Ch01_Sec02_01,
-  Ch01_Sec03_01,
-  Ch01_Sec04_01,
-  Ch01_Sec04_02,
-  Ch01_Sec04_03,
-  Ch01_Sec05_01,
-  Ch01_Sec05_02,
-  Ch01_Sec05_03,
-  Ch01_Sec06_01,
-  Ch01_Sec06_02,
-  Ch01_Sec06_03,
-  Ch01_Sec07_01,
-  Ch01_Sec07_02,
-  Ch01_Sec07_03,
-  Ch01_Sec07_04,
 } from '../chapters';
 import {
   Ch01_Layout,
@@ -34,6 +13,7 @@ import {
   Ch01_Sec05,
   Ch01_Sec06,
   Ch01_Sec07,
+  Ch01_Sec08,
   Ch02_Layout,
   Ch02_Sec01,
   Ch03_Layout,
@@ -41,6 +21,16 @@ import {
   RootLayout,
 } from '../layouts';
 import NotFound from '../views/NotFound';
+import {
+  Ch01_Sec01_challenges,
+  Ch01_Sec02_challenges,
+  Ch01_Sec03_challenges,
+  Ch01_Sec04_challenges,
+  Ch01_Sec05_challenges,
+  Ch01_Sec06_challenges,
+  Ch01_Sec07_challenges,
+  Ch01_Sec08_challenges,
+} from './ch01Challenges';
 
 const router = createBrowserRouter(
   [
@@ -50,7 +40,7 @@ const router = createBrowserRouter(
       children: [
         {
           // path: '', 等同 index: true,
-          index: true,
+          index: true, //  ' / === /ch01'
           element: <Ch01_Layout />,
         },
         {
@@ -58,121 +48,63 @@ const router = createBrowserRouter(
           element: <Ch01_Layout />,
           children: [
             {
+              path: '', // /ch01 === /ch01/sec01
+              element: <Ch01_Sec01 />,
+            },
+            {
               path: 'sec01',
               element: <Ch01_Sec01 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec01_01 />,
-                },
-                {
-                  path: '02',
-                  element: <Ch01_Sec01_02 />,
-                },
-                {
-                  path: '03',
-                  element: <Ch01_Sec01_03 />,
-                },
-                {
-                  path: '04',
-                  element: <Ch01_Sec01_04 />,
-                },
+                ...Ch01_Sec01_challenges
               ],
             },
             {
               path: 'sec02',
               element: <Ch01_Sec02 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec02_01 />,
-                },
+                ...Ch01_Sec02_challenges
               ],
             },
             {
               path: 'sec03',
               element: <Ch01_Sec03 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec03_01 />,
-                },
+                ...Ch01_Sec03_challenges
               ],
             },
             {
               path: 'sec04',
               element: <Ch01_Sec04 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec04_01 />,
-                },
-                {
-                  path: '02',
-                  element: <Ch01_Sec04_02 />,
-                },
-                {
-                  path: '03',
-                  element: <Ch01_Sec04_03 />,
-                },
+                ...Ch01_Sec04_challenges
               ],
             },
             {
               path: 'sec05',
               element: <Ch01_Sec05 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec05_01 />,
-                },
-                {
-                  path: '02',
-                  element: <Ch01_Sec05_02 />,
-                },
-                {
-                  path: '03',
-                  element: <Ch01_Sec05_03 />,
-                },
+                ...Ch01_Sec05_challenges
               ],
             },
             {
               path: 'sec06',
               element: <Ch01_Sec06 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec06_01 />,
-                },
-                {
-                  path: '02',
-                  element: <Ch01_Sec06_02 />,
-                },
-                {
-                  path: '03',
-                  element: <Ch01_Sec06_03 />,
-                },
+                ...Ch01_Sec06_challenges
               ],
             },
             {
               path: 'sec07',
               element: <Ch01_Sec07 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec07_01 />,
-                },
-                {
-                  path: '02',
-                  element: <Ch01_Sec07_02 />,
-                },
-                {
-                  path: '03',
-                  element: <Ch01_Sec07_03 />,
-                },
-                {
-                  path: '04',
-                  element: <Ch01_Sec07_04 />,
-                },
+                ...Ch01_Sec07_challenges
+              ],
+            },
+            {
+              path: 'sec08',
+              element: <Ch01_Sec08 />,
+              children: [
+                ...Ch01_Sec08_challenges
               ],
             },
           ],
@@ -183,7 +115,7 @@ const router = createBrowserRouter(
           children: [
             {
               path: 'sec01',
-              element: <Ch02_Sec01/>,
+              element: <Ch02_Sec01 />,
               children: [
                 {
                   path: '01',
@@ -203,7 +135,7 @@ const router = createBrowserRouter(
           children: [
             {
               path: 'sec01',
-              element: <Ch02_Sec01/>,
+              element: <Ch02_Sec01 />,
               children: [
                 {
                   path: '01',
@@ -223,7 +155,7 @@ const router = createBrowserRouter(
           children: [
             {
               path: 'sec01',
-              element: <Ch02_Sec01/>,
+              element: <Ch02_Sec01 />,
               children: [
                 {
                   path: '01',

@@ -45,6 +45,8 @@ export default function TodoList() {
       challengeIdx={1}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='heuristic-wave-crznkm'
+      solutionIFrameTitle='bold-ully-snj2uf'
     >
       <div className='challenge01-04-wrap' style={person.theme}>
         <h1>{person.name}'s Todos</h1>

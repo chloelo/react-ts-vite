@@ -73,6 +73,8 @@ export default function List() {
       challengeIdx={0}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='sad-mccarthy-mkp4st'
+      solutionIFrameTitle='keen-fermat-82etxk'
     >
       <article className='challenge01-07-wrap'>
         <h2>Scientists</h2>

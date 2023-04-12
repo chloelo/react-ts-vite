@@ -4,53 +4,6 @@
   padding: 2rem;
   text-align: center; */
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-/* body {
-  background: #2a2a2a;
-  color: #fff;
-}
-
-.section {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-} */
 body {
   color: #5f5f5f;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -120,15 +73,6 @@ main {
   max-width: 1280px;
   margin: 0 auto;
 }
-
-/* main a {
-  display: inline-block;
-  margin: 10px 5px;
-  border: 1px solid rgb(226, 226, 226);
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 4px;
-} */
 
 .sub-nav {
   /* padding-bottom: 20px; */
@@ -295,7 +239,7 @@ code {
     display: block;
     padding-left: 0;
   }
-  
+
   .avatar {
     border-radius: 50%;
   }
@@ -358,5 +302,56 @@ code {
       height: 100px;
       border-radius: 50%;
     }
+    &-04 {
+      hr {
+        border: 1px dashed #45c3d8;
+      }
+    }
+  }
+  .challenge01-08-wrap {
+    .day {
+      background: #fff;
+      color: #222;
+    }
+    .night {
+      background: #222;
+      color: #fff;
+    }
+    .avatar {
+      margin: 5px;
+      border-radius: 50%;
+    }
+    .panel {
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      margin-top: 20px;
+      padding: 10px;
+      width: 200px;
+    }
+    &-03 {
+      ul {
+        display: flex;
+      }
+      li {
+        border: 1px solid #aaa;
+        border-radius: 6px;
+        margin: 5px;
+        margin-bottom: 20px;
+        padding: 5px;
+        width: 70px;
+        height: 100px;
+      }
+    }
+  }
+}
+.iframe-wrap {
+  margin: 10px 0;
+  iframe {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
   }
 }

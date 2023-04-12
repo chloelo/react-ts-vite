@@ -51,6 +51,8 @@ export default function Gallery() {
       challengeIdx={0}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='nifty-cherry-23em0s'
+      solutionIFrameTitle='silly-surf-t3excs'
     >
       <div>
         <h1>Notable Scientists</h1>

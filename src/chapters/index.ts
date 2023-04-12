@@ -27,13 +27,13 @@ export {
 } from '../chapters/001-DescribingTheUI/04-JSXwithCurlyBraces/Challenge3';
 export {
   default as Ch01_Sec05_01,
-} from '../chapters/001-DescribingTheUI/05-PassingPropstoaComponent/Challenge1';
+} from '../chapters/001-DescribingTheUI/05-PassingPropsToAComponent/Challenge1';
 export {
   default as Ch01_Sec05_02,
-} from '../chapters/001-DescribingTheUI/05-PassingPropstoaComponent/Challenge2';
+} from '../chapters/001-DescribingTheUI/05-PassingPropsToAComponent/Challenge2';
 export {
   default as Ch01_Sec05_03,
-} from '../chapters/001-DescribingTheUI/05-PassingPropstoaComponent/Challenge3';
+} from '../chapters/001-DescribingTheUI/05-PassingPropsToAComponent/Challenge3';
 
 export {
   default as Ch01_Sec06_01,
@@ -57,3 +57,12 @@ export {
 export {
   default as Ch01_Sec07_04,
 } from '../chapters/001-DescribingTheUI/07-RenderingLists/Challenge4';
+export {
+  default as Ch01_Sec08_01,
+} from '../chapters/001-DescribingTheUI/08-KeepingComponentsPure/Challenge1';
+export {
+  default as Ch01_Sec08_02,
+} from '../chapters/001-DescribingTheUI/08-KeepingComponentsPure/Challenge2';
+export {
+  default as Ch01_Sec08_03,
+} from '../chapters/001-DescribingTheUI/08-KeepingComponentsPure/Challenge3';

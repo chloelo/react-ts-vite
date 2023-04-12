@@ -46,6 +46,8 @@ export default function Profile() {
       challengeIdx={2}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='naughty-allen-q7gkoz'
+      solutionIFrameTitle='gallant-carson-obht1g'
     >
       <div className='challenge01-05-wrap'>
         <Card title='Photo'>

@@ -14,6 +14,8 @@ function Profile() {
         challengeIdx={1}
         challengeTxt='畫面沒有正常 return'
         answer={ans}
+        challengeIFrameTitle='intelligent-shadow-fggp8l'
+        solutionIFrameTitle='nifty-wilson-hik8g3'
       >
         <img src='https://i.imgur.com/jA8hHMpm.jpg' alt='Katsuko Saruhashi' />;
       </ChallengeLayout>

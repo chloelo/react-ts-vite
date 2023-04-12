@@ -1,3 +1,4 @@
+import ChallengeIFrame from '../../../ChallengeIFrame';
 import ChallengeLayout from '../../../ChallengeLayout';
 import { getImageUrl2 } from '../utils';
 
@@ -62,6 +63,8 @@ export default function Profile() {
       challengeIdx={1}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='sharp-fire-5bcmto'
+      solutionIFrameTitle='nameless-resonance-gtxm9t'
     >
       <Avatar
         size={40}
@@ -84,6 +87,8 @@ export default function Profile() {
           imageId: '7vQD0fP',
         }}
       />
+      <h4>補充：window.devicePixelRatio 解法：</h4>
+      <ChallengeIFrame title='floral-wind-2ymzs8' />
     </ChallengeLayout>
   );
 }

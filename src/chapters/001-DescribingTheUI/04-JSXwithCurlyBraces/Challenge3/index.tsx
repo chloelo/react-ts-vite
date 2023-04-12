@@ -30,8 +30,8 @@ const ans = (
           圖片路徑的花括號裡可以放入 JS 邏輯，包含字串面板，所以寫成{' '}
           <code>
             {' '}
-            src={'\u007B'}`$={'\u007B'}baseUrl{'\u007d'}$={'\u007B'}
-            person.imageId{'\u007d'}$={'\u007B'}person.imageSize{'\u007d'}.jpg`
+            src={'\u007B'}`${'\u007B'}baseUrl{'\u007d'}${'\u007B'}
+            person.imageId{'\u007d'}${'\u007B'}person.imageSize{'\u007d'}.jpg`
             {'\u007d'}
           </code>{' '}
           即可正確呈現
@@ -48,6 +48,8 @@ export default function TodoList() {
       challengeIdx={2}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='confident-marco-g13qsd'
+      solutionIFrameTitle='compassionate-bush-2dhqyt'
     >
       <div className='challenge01-04-wrap' style={person.theme}>
         <h1>{person.name}'s Todos</h1>

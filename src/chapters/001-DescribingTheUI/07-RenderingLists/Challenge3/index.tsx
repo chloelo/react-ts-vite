@@ -33,6 +33,8 @@ export default function RecipeList() {
       challengeIdx={2}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='proud-cherry-xh4p8k'
+      solutionIFrameTitle='cranky-night-rcj7js'
     >
       <h2>Recipes</h2>
       {recipes.map(

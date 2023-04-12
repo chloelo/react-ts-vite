@@ -37,6 +37,8 @@ export default function TodoList() {
       challengeIdx={0}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='optimistic-estrela-iv8vfe'
+      solutionIFrameTitle='heuristic-wave-crznkm'
     >
       <View />
     </ChallengeLayout>

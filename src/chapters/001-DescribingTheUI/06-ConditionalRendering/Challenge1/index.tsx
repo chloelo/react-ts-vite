@@ -39,6 +39,8 @@ export default function PackingList() {
       challengeIdx={0}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='flamboyant-pascal-3o6p96'
+      solutionIFrameTitle='clever-aj-nnnz47'
     >
       <section>
         <h2>Sally Ride's Packing List</h2>

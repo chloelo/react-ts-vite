@@ -51,8 +51,10 @@ export default function Poem() {
       challengeIdx={3}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='great-nova-n9eqh1'
+      solutionIFrameTitle='zen-monad-j96ds9'
     >
-      <article>
+      <article className='challenge01-07-wrap-04'>
         {poem.lines.map((line, index) => (
           <Fragment key={index}>
             <p>{line}</p>

@@ -110,6 +110,8 @@ export default function DrinkList() {
       challengeIdx={2}
       challengeTxt={challenge}
       answer={ans}
+      challengeIFrameTitle='nostalgic-panini-0ps76v'
+      solutionIFrameTitle='youthful-lehmann-uueiyu'
     >
       <Drink name='tea' />
       <Drink name='coffee' />

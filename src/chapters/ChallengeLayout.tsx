@@ -1,4 +1,5 @@
 import { chapters } from '../assets/chaptersData';
+import ChallengeIFrame from './ChallengeIFrame';
 
 export type ChallengeLayoutProps = {
   children: React.ReactNode;
@@ -7,6 +8,8 @@ export type ChallengeLayoutProps = {
   chIdx: number;
   secIdx: number;
   challengeIdx: number;
+  challengeIFrameTitle: string;
+  solutionIFrameTitle?:string
 };
 
 export default function ChallengeLayout({
@@ -16,6 +19,8 @@ export default function ChallengeLayout({
   chIdx,
   secIdx,
   challengeIdx,
+  challengeIFrameTitle,
+  solutionIFrameTitle
 }: ChallengeLayoutProps) {
   const ary = chapters[chIdx]?.sections[secIdx]?.challenges;
   const challengeStr = ary[challengeIdx];
@@ -33,12 +38,18 @@ export default function ChallengeLayout({
           <dt>挑戰：</dt>
           <dd>{challengeTxt}</dd>
         </dl>
+        <ChallengeIFrame title={challengeIFrameTitle} />
         <dl className='ans'>
           <dt>解法：</dt>
           <dd>{answer}</dd>
         </dl>
       </div>
-      <div className='challenge-wrap'>{children}</div>
+      <div className='challenge-wrap'>
+        {children}
+        <h4>官網解法：</h4>
+        {solutionIFrameTitle && <ChallengeIFrame title={solutionIFrameTitle} />}
+        
+      </div>
     </>
   );
 }

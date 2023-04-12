@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { ChildrenProps } from "../../../Types";
+import { ChildrenProps } from '../../../../Types';
 
 export default function Panel({ children }: ChildrenProps) {
   const [open, setOpen] = useState(true);
