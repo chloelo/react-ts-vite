@@ -1,10 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import {
-  Ch01_Sec01_01,
-  Ch01_Sec01_02,
-} from '../chapters';
-import {
   Ch01_Layout,
   Ch01_Sec01,
   Ch01_Sec02,
@@ -16,6 +12,12 @@ import {
   Ch01_Sec08,
   Ch02_Layout,
   Ch02_Sec01,
+  Ch02_Sec02,
+  Ch02_Sec03,
+  Ch02_Sec04,
+  Ch02_Sec05,
+  Ch02_Sec06,
+  Ch02_Sec07,
   Ch03_Layout,
   Ch04_Layout,
   RootLayout,
@@ -31,6 +33,15 @@ import {
   Ch01_Sec07_challenges,
   Ch01_Sec08_challenges,
 } from './ch01Challenges';
+import {
+  Ch02_Sec01_challenges,
+  Ch02_Sec02_challenges,
+  Ch02_Sec03_challenges,
+  Ch02_Sec04_challenges,
+  Ch02_Sec05_challenges,
+  Ch02_Sec06_challenges,
+  Ch02_Sec07_challenges,
+} from './ch02Challenges';
 
 const router = createBrowserRouter(
   [
@@ -114,60 +125,93 @@ const router = createBrowserRouter(
           element: <Ch02_Layout />,
           children: [
             {
+              path: '', 
+              element: <Ch02_Sec01 />,
+            },
+            {
               path: 'sec01',
               element: <Ch02_Sec01 />,
               children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec01_01 />,
-                },
+                ...Ch02_Sec01_challenges
               ],
             },
             {
-              path: '02',
-              element: <Ch01_Sec01_02 />,
+              path: 'sec02',
+              element: <Ch02_Sec02 />,
+              children: [
+                ...Ch02_Sec02_challenges
+              ],
+            },
+            {
+              path: 'sec03',
+              element: <Ch02_Sec03 />,
+              children: [
+                ...Ch02_Sec03_challenges
+              ],
+            },
+            {
+              path: 'sec04',
+              element: <Ch02_Sec04 />,
+              children: [
+                ...Ch02_Sec04_challenges
+              ],
+            },
+            {
+              path: 'sec05',
+              element: <Ch02_Sec05 />,
+              children: [
+                ...Ch02_Sec05_challenges
+              ],
+            },
+            {
+              path: 'sec06',
+              element: <Ch02_Sec06 />,
+              children: [
+                ...Ch02_Sec06_challenges
+              ],
+            },
+            {
+              path: 'sec07',
+              element: <Ch02_Sec07 />,
+              children: [
+                ...Ch02_Sec07_challenges
+              ],
             },
           ],
         },
         {
           path: 'ch03',
           element: <Ch03_Layout />,
-          children: [
-            {
-              path: 'sec01',
-              element: <Ch02_Sec01 />,
-              children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec01_01 />,
-                },
-              ],
-            },
-            {
-              path: '02',
-              element: <Ch01_Sec01_02 />,
-            },
-          ],
+          // children: [
+          //   {
+          //     path: '', 
+          //     element: <Ch03_Sec01 />,
+          //   },
+          //   {
+          //     path: 'sec01',
+          //     element: <Ch03_Sec01 />,
+          //     children: [
+          //       ...Ch03_Sec01_challenges
+          //     ],
+          //   },
+          // ],
         },
         {
           path: 'ch04',
           element: <Ch04_Layout />,
-          children: [
-            {
-              path: 'sec01',
-              element: <Ch02_Sec01 />,
-              children: [
-                {
-                  path: '01',
-                  element: <Ch01_Sec01_01 />,
-                },
-              ],
-            },
-            {
-              path: '02',
-              element: <Ch01_Sec01_02 />,
-            },
-          ],
+          // children: [
+          //   {
+          //     path: '', 
+          //     element: <Ch04_Sec01 />,
+          //   },
+          //   {
+          //     path: 'sec01',
+          //     element: <Ch04_Sec01 />,
+          //     children: [
+          //       ...Ch03_Sec01_challenges
+          //     ],
+          //   },
+          // ],
         },
         {
           path: '*',

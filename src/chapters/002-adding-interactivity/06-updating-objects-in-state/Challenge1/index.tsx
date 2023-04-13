@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { ChangeEventInputProps } from "../../../Types";
+import { ChangeEventInputProps } from '../../../../Types';
 
 export default function Scoreboard() {
   const [player, setPlayer] = useState({

@@ -3,7 +3,7 @@ import {
   useState,
 } from 'react';
 
-import { SectionLayout } from './SectionLayout';
+import { SectionLayout } from '../SectionLayout';
 
 type ClockProps = {
   color: string;

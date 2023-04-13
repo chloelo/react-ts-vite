@@ -1,6 +1,6 @@
-import { useImmer } from "use-immer";
+import { useImmer } from 'use-immer';
 
-import { ChangeEventInputProps } from "../../../Types";
+import { ChangeEventInputProps } from '../../../../Types';
 
 export default function Form() {
   const [person, updatePerson] = useImmer({

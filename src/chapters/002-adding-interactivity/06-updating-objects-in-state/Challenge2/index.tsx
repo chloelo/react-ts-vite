@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { ChangeEventSelectProps } from "../../../Types";
-import Background from "./Background";
-import Box from "./Box";
+import { ChangeEventSelectProps } from '../../../../Types';
+import Background from './Background';
+import Box from './Box';
 
 const initialPosition = {
   x: 0,

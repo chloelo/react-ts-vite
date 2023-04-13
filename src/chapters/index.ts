@@ -126,4 +126,52 @@ export {
   default as Ch02_Sec07_04,
 } from '../chapters/002-adding-interactivity/07-updating-arrays-in-state/Challenge4';
 
-// 08-keeping-components-pure
+export {
+  default as Ch03_Sec01_01,
+} from '../chapters/003-managing-state/01-reacting-to-input-with-state/Challenge1';
+export {
+  default as Ch03_Sec01_02,
+} from '../chapters/003-managing-state/01-reacting-to-input-with-state/Challenge2';
+export {
+  default as Ch03_Sec01_03,
+} from '../chapters/003-managing-state/01-reacting-to-input-with-state/Challenge3';
+
+export {
+  default as Ch03_Sec02_01,
+} from '../chapters/003-managing-state/02-choosing-the-state-structure/Challenge1';
+export {
+  default as Ch03_Sec02_02,
+} from '../chapters/003-managing-state/02-choosing-the-state-structure/Challenge2';
+export {
+  default as Ch03_Sec02_03,
+} from '../chapters/003-managing-state/02-choosing-the-state-structure/Challenge3';
+export {
+  default as Ch03_Sec02_04,
+} from '../chapters/003-managing-state/02-choosing-the-state-structure/Challenge4';
+
+export {
+  default as Ch03_Sec03_01,
+} from '../chapters/003-managing-state/03-sharing-state-between-components/Challenge1';
+export {
+  default as Ch03_Sec03_02,
+} from '../chapters/003-managing-state/03-sharing-state-between-components/Challenge2';
+
+export {
+  default as Ch03_Sec04_01,
+} from '../chapters/003-managing-state/04-preserving-and-resetting-state/Challenge1';
+export {
+  default as Ch03_Sec04_02,
+} from '../chapters/003-managing-state/04-preserving-and-resetting-state/Challenge2';
+export {
+  default as Ch03_Sec04_03,
+} from '../chapters/003-managing-state/04-preserving-and-resetting-state/Challenge3';
+export {
+  default as Ch03_Sec04_04,
+} from '../chapters/003-managing-state/04-preserving-and-resetting-state/Challenge4';
+export {
+  default as Ch03_Sec04_05,
+} from '../chapters/003-managing-state/04-preserving-and-resetting-state/Challenge5';
+
+export {
+  default as Ch03_Sec05_01,
+} from '../chapters/003-managing-state/05-extracting-state-logic-into-a-reducer/Challenge1';

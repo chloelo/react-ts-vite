@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { PointerEventDivProps, ReactElement } from "../../../Types";
-import { BackgroundProps } from "./Background";
+import {
+  PointerEventDivProps,
+  ReactElement,
+} from '../../../../Types';
+import { BackgroundProps } from './Background';
 
 type BoxProps = {
   children: ReactElement;

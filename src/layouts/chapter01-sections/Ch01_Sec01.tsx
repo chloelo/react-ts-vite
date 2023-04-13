@@ -1,4 +1,4 @@
-import { SectionLayout } from './SectionLayout';
+import { SectionLayout } from '../SectionLayout';
 
 const Ch01_Sec01 = () => {
   return (
