@@ -28,7 +28,7 @@ export default function App() {
       <ChallengeLayout
         chIdx={1}
         secIdx={0}
-        challengeIdx={0}
+        challengeIdx={1}
         challengeTxt={challenge}
         answer={ans}
         challengeIFrameTitle='relaxed-merkle-qmxzl1'

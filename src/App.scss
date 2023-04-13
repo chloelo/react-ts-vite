@@ -233,12 +233,13 @@ code {
   }
   table {
     @apply w-full border-collapse;
-    th,td {
+    th,
+    td {
       @apply text-center;
       padding: 10px 5px;
     }
   }
-  
+
   table,
   td,
   th {
@@ -366,5 +367,20 @@ code {
     border: 0;
     border-radius: 4px;
     overflow: hidden;
+  }
+}
+.yt-iframe-wrap {
+  @apply my-4;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 }
