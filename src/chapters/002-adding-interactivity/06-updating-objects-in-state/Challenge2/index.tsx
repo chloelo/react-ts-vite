@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { ChangeEventSelectProps } from '../../../../Types';
+import ChallengeLayout from '../../../ChallengeLayout';
 import Background from './Background';
 import Box from './Box';
 
@@ -11,7 +12,7 @@ const initialPosition = {
 
 export default function Canvas() {
   const [shape, setShape] = useState({
-    color: "orange",
+    color: 'orange',
     position: initialPosition,
   });
 
@@ -33,19 +34,33 @@ export default function Canvas() {
       color: e.target.value,
     });
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 2 of 3: Find and fix the mutation </h1>
-      <select value={shape.color} onChange={handleColorChange}>
-        <option value="orange">orange</option>
-        <option value="lightpink">lightpink</option>
-        <option value="aliceblue">aliceblue</option>
-      </select>
-      <Background position={initialPosition} />
-      <Box color={shape.color} position={shape.position} onMove={handleMove}>
-        <>Drag me!</>
-      </Box>
+      <ChallengeLayout
+        chIdx={1}
+        secIdx={5}
+        challengeIdx={1}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='weathered-firefly-dbuwir'
+        solutionIFrameTitle='zen-monad-l18k4e'
+      >
+        <select value={shape.color} onChange={handleColorChange}>
+          <option value='orange'>orange</option>
+          <option value='lightpink'>lightpink</option>
+          <option value='aliceblue'>aliceblue</option>
+        </select>
+        <Background position={initialPosition} />
+        <Box color={shape.color} position={shape.position} onMove={handleMove}>
+          <>Drag me!</>
+        </Box>
+      </ChallengeLayout>
     </>
   );
 }

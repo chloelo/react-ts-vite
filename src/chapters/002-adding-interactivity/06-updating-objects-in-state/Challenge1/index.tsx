@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
 import { ChangeEventInputProps } from '../../../../Types';
+import ChallengeLayout from '../../../ChallengeLayout';
 
 export default function Scoreboard() {
   const [player, setPlayer] = useState({
-    firstName: "Ranjani",
-    lastName: "Shettar",
+    firstName: 'Ranjani',
+    lastName: 'Shettar',
     score: 10,
   });
   function handlePlusClick() {
@@ -44,26 +45,40 @@ export default function Scoreboard() {
   //     lastName: e.target.value
   //   });
   // }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 1 of 3: Fix incorrect state updates </h1>
-      <p>改變物件記得要淺層拷貝</p>
-      <label>
-        Score: <b>{player.score}</b>{" "}
-        <button onClick={handlePlusClick}>+1</button>
-      </label>
-      <label>
-        First name:
-        <input value={player.firstName} onChange={handleFirstNameChange} />
-      </label>
-      <label>
-        Last name:
-        <input value={player.lastName} onChange={handleLastNameChange} />
-      </label>
-      <hr />
-      <div>firstName: {player.firstName}</div>
-      <div>lastName: {player.lastName}</div>
+      <ChallengeLayout
+        chIdx={1}
+        secIdx={5}
+        challengeIdx={0}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='lively-glitter-ov6xyb'
+        solutionIFrameTitle='ecstatic-hypatia-uyi9xm'
+      >
+        <p>改變物件記得要淺層拷貝</p>
+        <label>
+          Score: <b>{player.score}</b>{' '}
+          <button onClick={handlePlusClick}>+1</button>
+        </label>
+        <label>
+          First name:
+          <input value={player.firstName} onChange={handleFirstNameChange} />
+        </label>
+        <label>
+          Last name:
+          <input value={player.lastName} onChange={handleLastNameChange} />
+        </label>
+        <hr />
+        <div>firstName: {player.firstName}</div>
+        <div>lastName: {player.lastName}</div>
+      </ChallengeLayout>
     </>
   );
 }

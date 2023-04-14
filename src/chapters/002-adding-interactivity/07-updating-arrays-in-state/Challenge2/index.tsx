@@ -2,20 +2,22 @@
 
 import { useState } from 'react';
 
+import ChallengeLayout from '../../../ChallengeLayout';
+
 const initialProducts = [
   {
     id: 0,
-    name: "Baklava",
+    name: 'Baklava',
     count: 1,
   },
   {
     id: 1,
-    name: "Cheese",
+    name: 'Cheese',
     count: 5,
   },
   {
     id: 2,
-    name: "Spaghetti",
+    name: 'Spaghetti',
     count: 2,
   },
 ];
@@ -52,31 +54,45 @@ export default function ShoppingCart() {
     nextProducts = nextProducts.filter((p) => p.count > 0);
     setProducts(nextProducts);
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 2 of 4: Remove an item from the shopping cart </h1>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} (<b>{product.count}</b>)
-            <button
-              onClick={() => {
-                handleIncreaseClick(product.id);
-              }}
-            >
-              +
-            </button>
-            <button
-              onClick={() => {
-                handleDecreaseClick(product.id);
-              }}
-            >
-              –
-            </button>
-          </li>
-        ))}
-      </ul>
+      <ChallengeLayout
+        chIdx={1}
+        secIdx={6}
+        challengeIdx={1}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='relaxed-faraday-o2x2iz'
+        solutionIFrameTitle='dreamy-albattani-tz3j5z'
+      >
+        <ul>
+          {products.map((product) => (
+            <li key={product.id}>
+              {product.name} (<b>{product.count}</b>)
+              <button
+                onClick={() => {
+                  handleIncreaseClick(product.id);
+                }}
+              >
+                +
+              </button>
+              <button
+                onClick={() => {
+                  handleDecreaseClick(product.id);
+                }}
+              >
+                –
+              </button>
+            </li>
+          ))}
+        </ul>
+      </ChallengeLayout>
     </>
   );
 }

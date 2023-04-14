@@ -17,7 +17,7 @@ function Profile() {
         challengeIFrameTitle='intelligent-shadow-fggp8l'
         solutionIFrameTitle='nifty-wilson-hik8g3'
       >
-        <img src='https://i.imgur.com/jA8hHMpm.jpg' alt='Katsuko Saruhashi' />;
+        <img src='https://i.imgur.com/jA8hHMpm.jpg' alt='Katsuko Saruhashi' />
       </ChallengeLayout>
     </>
   );

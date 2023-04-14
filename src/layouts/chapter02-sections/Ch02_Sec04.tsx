@@ -5,7 +5,7 @@ const Ch02_Sec04 = () => {
   return (
     <>
       <SectionLayout chIdx={1} secIdx={3}>
-        <h4>導讀影片</h4>
+        {/* <h4>導讀影片</h4>
         <div className='yt-iframe-wrap'>
           <iframe
             width='560'
@@ -15,7 +15,7 @@ const Ch02_Sec04 = () => {
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
         <ol>
           <li>
             render 在 react 裡的意思就是 component function 被呼叫，function

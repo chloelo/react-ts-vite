@@ -5,11 +5,24 @@ body {
   color: #5f5f5f;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+h2 {
+  @apply my-5 text-2xl font-bold;
+}
+h3 {
+  @apply font-bold text-lg my-4;
+}
+h4 {
+  @apply font-bold text-base my-4;
+}
 li {
   list-style: none;
 }
-
+button {
+  border: 1px solid #b1b1b1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #eee;
+}
 ul {
   display: flex;
 }
@@ -54,15 +67,9 @@ footer {
 }
 
 .header {
+  @apply fixed top-0 left-0 right-0 flex items-center justify-center;
   background-color: #ebebeb;
   color: aliceblue;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main {
@@ -357,6 +364,91 @@ code {
       }
     }
   }
+  .challenge03-01-wrap {
+    .background {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+    }
+
+    .background--active {
+      background: #a6b5ff;
+    }
+
+    .picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    .picture--active {
+      border: 5px solid #a6b5ff;
+    }
+    label {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .challenge03-02-wrap {
+    button {
+      margin: 5px;
+    }
+    li {
+      border-radius: 5px;
+    }
+    .highlighted {
+      background: #d2eaff;
+    }
+    &-04 {
+      input {
+        margin: 5px;
+      }
+      li {
+        border-radius: 5px;
+      }
+      label {
+        width: 100%;
+        padding: 5px;
+        display: inline-block;
+      }
+      .selected {
+        background: #d2eaff;
+      }
+    }
+  }
+  .challenge03-03-wrap {
+    input {
+      margin: 5px;
+    }
+    label {
+      display: block;
+    }
+  }
+  .challenge03-04-wrap {
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+    &-03 {
+      li {
+        display: inline-block;
+      }
+      li button {
+        padding: 10px;
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+      button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 .iframe-wrap {
   margin: 10px 0;
@@ -383,4 +475,8 @@ code {
     height: 100%;
     border: 0;
   }
+}
+.self-ans {
+  @apply mb-6 pb-6;
+  border-bottom: 2px solid rgb(223, 223, 223);
 }

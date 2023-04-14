@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import ChallengeLayout from '../../../ChallengeLayout';
 import {
   filterItems,
   FilterItemsType,
@@ -11,19 +12,35 @@ import {
 type ChangeEventInputProps = React.ChangeEvent<HTMLInputElement>;
 
 export default function FilterableList() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const filterResult = filterItems(foods, query);
 
   function handleChange(e: ChangeEventInputProps) {
     setQuery(e.target.value);
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 2 of 2: Filtering a list </h1>
-      <SearchBar query={query} handleChange={handleChange} />
-      <hr />
-      <List items={filterResult} />
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={2}
+        challengeIdx={1}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='keen-burnell-yl79b3'
+        solutionIFrameTitle='romantic-pascal-clf0mv'
+      >
+        <div className=''>
+          <SearchBar query={query} handleChange={handleChange} />
+          <hr />
+          <List items={filterResult} />
+        </div>
+      </ChallengeLayout>
     </>
   );
 }

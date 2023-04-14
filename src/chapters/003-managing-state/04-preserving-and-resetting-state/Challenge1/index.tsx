@@ -1,6 +1,7 @@
-// import "./index.css";
-
 import { useState } from 'react';
+
+import ChallengeIFrame from '../../../ChallengeIFrame';
+import ChallengeLayout from '../../../ChallengeLayout';
 
 export default function App() {
   const [showHint, setShowHint] = useState(false);
@@ -23,31 +24,50 @@ export default function App() {
   //     }}>Show hint</button>
   //   </div>
   // );
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
-    <div>
-      {showHint && (
-        <p>
-          <i>Hint: Your favorite city?</i>
-        </p>
-      )}
-      <Form />
-      <button
-        onClick={() => {
-          setShowHint(!showHint);
-        }}
+    <>
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={3}
+        challengeIdx={0}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='zen-moon-hz2q1x'
+        solutionIFrameTitle='holy-bush-34tfou'
       >
-        {showHint ? "Hide hint" : "Show hint"}
-      </button>
-    </div>
+        <div>
+          {showHint && (
+            <p>
+              <i>Hint: Your favorite city?</i>
+            </p>
+          )}
+          <Form />
+          <button
+            onClick={() => {
+              setShowHint(!showHint);
+            }}
+          >
+            {showHint ? 'Hide hint' : 'Show hint'}
+          </button>
+        </div>
+      </ChallengeLayout>
+      <p>官網提供的另一種解法：</p>
+      <ChallengeIFrame title='goofy-panka-4ugeml' />
+    </>
   );
 }
 
 function Form() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   return (
     <>
-      <h1>Challenge 1 of 5: Fix disappearing input text </h1>
-      <textarea value={text} onChange={(e) => setText(e.target.value)} />
+      <textarea className='block my-3' value={text} onChange={(e) => setText(e.target.value)} />
     </>
   );
 }

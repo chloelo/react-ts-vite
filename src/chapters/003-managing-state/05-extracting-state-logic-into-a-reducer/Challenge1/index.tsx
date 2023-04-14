@@ -1,53 +1,27 @@
-// import "./index.css";
-
-import { useState } from 'react';
+import ChallengeLayout from '../../../ChallengeLayout';
 
 export default function App() {
-  const [showHint, setShowHint] = useState(false);
-  // if (showHint) {
-  //   return (
-  //     <div>
-  //       <p><i>Hint: Your favorite city?</i></p>
-  //       <Form />
-  //       <button onClick={() => {
-  //         setShowHint(false);
-  //       }}>Hide hint</button>
-  //     </div>
-  //   );
-  // }
-  // return (
-  //   <div>
-  //     <Form />
-  //     <button onClick={() => {
-  //       setShowHint(true);
-  //     }}>Show hint</button>
-  //   </div>
-  // );
-  return (
-    <div>
-      {showHint && (
-        <p>
-          <i>Hint: Your favorite city?</i>
-        </p>
-      )}
-      <Form />
-      <button
-        onClick={() => {
-          setShowHint(!showHint);
-        }}
-      >
-        {showHint ? "Hide hint" : "Show hint"}
-      </button>
-    </div>
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
   );
-}
-
-function Form() {
-  const [text, setText] = useState("");
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 1 of 5: Fix disappearing input text </h1>
-      <textarea value={text} onChange={(e) => setText(e.target.value)} />
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={4}
+        challengeIdx={0}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='stoic-golick-x0vpod'
+        solutionIFrameTitle='vibrant-rhodes-gkinsn'
+      >
+        <>
+          <div>顯示挑戰</div>
+        </>
+      </ChallengeLayout>
     </>
   );
 }

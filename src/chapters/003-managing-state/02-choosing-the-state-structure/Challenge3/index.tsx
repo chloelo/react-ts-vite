@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import ChallengeLayout from '../../../ChallengeLayout';
 import { initialLetters } from './data';
 import Letter from './Letter';
 
@@ -27,22 +28,38 @@ export default function MailClient() {
       })
     );
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 3 of 4: Fix the disappearing selection </h1>
-      <h2>Inbox</h2>
-      <ul>
-        {letters.map((letter) => (
-          <Letter
-            key={letter.id}
-            letter={letter}
-            isHighlighted={letter.id === highlightedId}
-            onHover={handleHover}
-            onToggleStar={handleStar}
-          />
-        ))}
-      </ul>
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={1}
+        challengeIdx={2}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='gifted-shadow-5bdb53'
+        solutionIFrameTitle='romantic-johnson-zupoej'
+      >
+        <div className='challenge03-02-wrap'>
+          <h2>Inbox</h2>
+          <ul>
+            {letters.map((letter) => (
+              <Letter
+                key={letter.id}
+                letter={letter}
+                isHighlighted={letter.id === highlightedId}
+                onHover={handleHover}
+                onToggleStar={handleStar}
+              />
+            ))}
+          </ul>
+        </div>
+      </ChallengeLayout>
     </>
   );
 }

@@ -9,7 +9,7 @@ export type ChallengeLayoutProps = {
   secIdx: number;
   challengeIdx: number;
   challengeIFrameTitle: string;
-  solutionIFrameTitle?:string
+  solutionIFrameTitle?: string;
 };
 
 export default function ChallengeLayout({
@@ -20,7 +20,7 @@ export default function ChallengeLayout({
   secIdx,
   challengeIdx,
   challengeIFrameTitle,
-  solutionIFrameTitle
+  solutionIFrameTitle,
 }: ChallengeLayoutProps) {
   const ary = chapters[chIdx]?.sections[secIdx]?.challenges;
   const challengeStr = ary[challengeIdx];
@@ -45,10 +45,12 @@ export default function ChallengeLayout({
         </dl>
       </div>
       <div className='challenge-wrap'>
-        {children}
+        <div className='self-ans'>
+          <h4>自我練習：</h4>
+          {children}
+        </div>
         <h4>官網解法：</h4>
         {solutionIFrameTitle && <ChallengeIFrame title={solutionIFrameTitle} />}
-        
       </div>
     </>
   );

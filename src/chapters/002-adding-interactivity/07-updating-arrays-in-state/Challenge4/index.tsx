@@ -2,6 +2,7 @@
 
 import { useImmer } from 'use-immer';
 
+import ChallengeLayout from '../../../ChallengeLayout';
 import AddTodo from './AddTodo';
 import TaskList from './TaskList';
 
@@ -15,9 +16,9 @@ export type DataTodo = {
 export type DataTodos = DataTodo[];
 
 const initialTodos = [
-  { id: 0, title: "Buy milk", done: true },
-  { id: 1, title: "Eat tacos", done: false },
-  { id: 2, title: "Brew tea", done: false },
+  { id: 0, title: 'Buy milk', done: true },
+  { id: 1, title: 'Eat tacos', done: false },
+  { id: 2, title: 'Brew tea', done: false },
 ];
 
 export default function TaskApp() {
@@ -115,16 +116,30 @@ export default function TaskApp() {
     // );
     // todos.splice(index, 1);
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 4 of 4: Fix the mutations using Immer </h1>
-      <AddTodo onAddTodo={handleAddTodo} />
-      <TaskList
-        todos={todos}
-        onChangeTodo={handleChangeTodo}
-        onDeleteTodo={handleDeleteTodo}
-      />
+      <ChallengeLayout
+        chIdx={1}
+        secIdx={6}
+        challengeIdx={3}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='distracted-stonebraker-qr9pck'
+        solutionIFrameTitle='strange-frog-xbtel5'
+      >
+        <AddTodo onAddTodo={handleAddTodo} />
+        <TaskList
+          todos={todos}
+          onChangeTodo={handleChangeTodo}
+          onDeleteTodo={handleDeleteTodo}
+        />
+      </ChallengeLayout>
     </>
   );
 }

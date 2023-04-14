@@ -1,15 +1,14 @@
-// import "./index.css";
-
 import { useState } from 'react';
 
+import ChallengeLayout from '../../../ChallengeLayout';
 import AddItem from './AddItem';
 import PackingList from './PackingList';
 
 let nextId = 3;
 const initialItems = [
-  { id: 0, title: "Warm socks", packed: true },
-  { id: 1, title: "Travel journal", packed: false },
-  { id: 2, title: "Watercolors", packed: false },
+  { id: 0, title: 'Warm socks', packed: true },
+  { id: 1, title: 'Travel journal', packed: false },
+  { id: 2, title: 'Watercolors', packed: false },
 ];
 
 type IdProps = number;
@@ -66,20 +65,34 @@ export default function TravelPlan() {
     setItems(items.filter((item) => item.id !== itemId));
     // setPacked(packed - 1);
   }
-
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
     <>
-      <h1>Challenge 2 of 4: Fix a broken packing list </h1>
-      <AddItem onAddItem={handleAddItem} />
-      <PackingList
-        items={items}
-        onChangeItem={handleChangeItem}
-        onDeleteItem={handleDeleteItem}
-      />
-      <hr />
-      <b>
-        {packed} out of {total} packed!
-      </b>
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={1}
+        challengeIdx={1}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='cranky-ptolemy-m4i25l'
+        solutionIFrameTitle='admiring-sky-kfop4n'
+      >
+        <AddItem onAddItem={handleAddItem} />
+        <PackingList
+          items={items}
+          onChangeItem={handleChangeItem}
+          onDeleteItem={handleDeleteItem}
+        />
+        <hr />
+        <b>
+          {packed} out of {total} packed!
+        </b>
+      </ChallengeLayout>
     </>
   );
 }

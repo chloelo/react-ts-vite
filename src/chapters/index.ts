@@ -175,3 +175,131 @@ export {
 export {
   default as Ch03_Sec05_01,
 } from '../chapters/003-managing-state/05-extracting-state-logic-into-a-reducer/Challenge1';
+export {
+  default as Ch03_Sec05_02,
+} from '../chapters/003-managing-state/05-extracting-state-logic-into-a-reducer/Challenge2';
+export {
+  default as Ch03_Sec05_03,
+} from '../chapters/003-managing-state/05-extracting-state-logic-into-a-reducer/Challenge3';
+export {
+  default as Ch03_Sec05_04,
+} from '../chapters/003-managing-state/05-extracting-state-logic-into-a-reducer/Challenge4';
+
+export {
+  default as Ch03_Sec06_01,
+} from '../chapters/003-managing-state/06-passing-data-deeply-with-context/Challenge1';
+
+export {
+  default as Ch03_Sec07_01,
+} from '../chapters/003-managing-state/07-scaling-up-with-reducer-and-context/Challenge1';
+
+export {
+  default as Ch04_Sec01_01,
+} from '../chapters/004-escape-hatches/01-referencing-values-with-refs/Challenge1';
+export {
+  default as Ch04_Sec01_02,
+} from '../chapters/004-escape-hatches/01-referencing-values-with-refs/Challenge2';
+export {
+  default as Ch04_Sec01_03,
+} from '../chapters/004-escape-hatches/01-referencing-values-with-refs/Challenge3';
+export {
+  default as Ch04_Sec01_04,
+} from '../chapters/004-escape-hatches/01-referencing-values-with-refs/Challenge4';
+
+// 02-manipulating-the-dom-with-refs *4
+export {
+  default as Ch04_Sec02_01,
+} from '../chapters/004-escape-hatches/02-manipulating-the-dom-with-refs/Challenge1';
+export {
+  default as Ch04_Sec02_02,
+} from '../chapters/004-escape-hatches/02-manipulating-the-dom-with-refs/Challenge2';
+export {
+  default as Ch04_Sec02_03,
+} from '../chapters/004-escape-hatches/02-manipulating-the-dom-with-refs/Challenge3';
+export {
+  default as Ch04_Sec02_04,
+} from '../chapters/004-escape-hatches/02-manipulating-the-dom-with-refs/Challenge4';
+// 03-synchronizing-with-effects *4
+export {
+  default as Ch04_Sec03_01,
+} from '../chapters/004-escape-hatches/03-synchronizing-with-effects/Challenge1';
+export {
+  default as Ch04_Sec03_02,
+} from '../chapters/004-escape-hatches/03-synchronizing-with-effects/Challenge2';
+export {
+  default as Ch04_Sec03_03,
+} from '../chapters/004-escape-hatches/03-synchronizing-with-effects/Challenge3';
+export {
+  default as Ch04_Sec03_04,
+} from '../chapters/004-escape-hatches/03-synchronizing-with-effects/Challenge4';
+// 04-you-might-not-need-an-effect *4
+export {
+  default as Ch04_Sec04_01,
+} from '../chapters/004-escape-hatches/04-you-might-not-need-an-effect/Challenge1';
+export {
+  default as Ch04_Sec04_02,
+} from '../chapters/004-escape-hatches/04-you-might-not-need-an-effect/Challenge2';
+export {
+  default as Ch04_Sec04_03,
+} from '../chapters/004-escape-hatches/04-you-might-not-need-an-effect/Challenge3';
+export {
+  default as Ch04_Sec04_04,
+} from '../chapters/004-escape-hatches/04-you-might-not-need-an-effect/Challenge4';
+// 05-lifecycle-of-reactive-effects *5
+export {
+  default as Ch04_Sec05_01,
+} from '../chapters/004-escape-hatches/05-lifecycle-of-reactive-effects/Challenge1';
+export {
+  default as Ch04_Sec05_02,
+} from '../chapters/004-escape-hatches/05-lifecycle-of-reactive-effects/Challenge2';
+export {
+  default as Ch04_Sec05_03,
+} from '../chapters/004-escape-hatches/05-lifecycle-of-reactive-effects/Challenge3';
+export {
+  default as Ch04_Sec05_04,
+} from '../chapters/004-escape-hatches/05-lifecycle-of-reactive-effects/Challenge4';
+export {
+  default as Ch04_Sec05_05,
+} from '../chapters/004-escape-hatches/05-lifecycle-of-reactive-effects/Challenge5';
+// 06-separating-events-from-effects *4
+export {
+  default as Ch04_Sec06_01,
+} from '../chapters/004-escape-hatches/06-separating-events-from-effects/Challenge1';
+export {
+  default as Ch04_Sec06_02,
+} from '../chapters/004-escape-hatches/06-separating-events-from-effects/Challenge2';
+export {
+  default as Ch04_Sec06_03,
+} from '../chapters/004-escape-hatches/06-separating-events-from-effects/Challenge3';
+export {
+  default as Ch04_Sec06_04,
+} from '../chapters/004-escape-hatches/06-separating-events-from-effects/Challenge4';
+// 07-removing-effect-dependencies *4
+export {
+  default as Ch04_Sec07_01,
+} from '../chapters/004-escape-hatches/07-removing-effect-dependencies/Challenge1';
+export {
+  default as Ch04_Sec07_02,
+} from '../chapters/004-escape-hatches/07-removing-effect-dependencies/Challenge2';
+export {
+  default as Ch04_Sec07_03,
+} from '../chapters/004-escape-hatches/07-removing-effect-dependencies/Challenge3';
+export {
+  default as Ch04_Sec07_04,
+} from '../chapters/004-escape-hatches/07-removing-effect-dependencies/Challenge4';
+// 08-reusing-logic-with-custom-hooks *5
+export {
+  default as Ch04_Sec08_01,
+} from '../chapters/004-escape-hatches/08-reusing-logic-with-custom-hooks/Challenge1';
+export {
+  default as Ch04_Sec08_02,
+} from '../chapters/004-escape-hatches/08-reusing-logic-with-custom-hooks/Challenge2';
+export {
+  default as Ch04_Sec08_03,
+} from '../chapters/004-escape-hatches/08-reusing-logic-with-custom-hooks/Challenge3';
+export {
+  default as Ch04_Sec08_04,
+} from '../chapters/004-escape-hatches/08-reusing-logic-with-custom-hooks/Challenge4';
+export {
+  default as Ch04_Sec08_05,
+} from '../chapters/004-escape-hatches/08-reusing-logic-with-custom-hooks/Challenge5';

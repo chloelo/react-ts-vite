@@ -1,6 +1,11 @@
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import Clock from "./Clock";
+import ChallengeIFrame from '../../../ChallengeIFrame';
+import ChallengeLayout from '../../../ChallengeLayout';
+import Clock from './Clock';
 
 function useTime() {
   const [time, setTime] = useState(() => new Date());
@@ -15,21 +20,40 @@ function useTime() {
 
 export default function App() {
   const time = useTime();
-  const [color, setColor] = useState("lightcoral");
+  const [color, setColor] = useState('lightcoral');
+  const challenge = (
+    <>
+      <p>說明待完成，之後補上</p>
+    </>
+  );
+  const ans = <p>說明待完成，之後補上</p>;
   return (
-    <div>
-      <h1>Challenge 1 of 4: Fix a component that’s not updating</h1>
-      <p>不要把 props 塞進useState裡，不會同步更新</p>
-      <hr />
-      <p>
-        Pick a color:{" "}
-        <select value={color} onChange={(e) => setColor(e.target.value)}>
-          <option value="lightcoral">lightcoral</option>
-          <option value="midnightblue">midnightblue</option>
-          <option value="rebeccapurple">rebeccapurple</option>
-        </select>
-      </p>
-      <Clock color={color} time={time.toLocaleTimeString()} />
-    </div>
+    <>
+      <ChallengeLayout
+        chIdx={2}
+        secIdx={1}
+        challengeIdx={0}
+        challengeTxt={challenge}
+        answer={ans}
+        challengeIFrameTitle='affectionate-leftpad-iwgppc'
+        solutionIFrameTitle='interesting-benz-oii2r3'
+      >
+        <div>
+          <p>不要把 props 塞進useState裡，不會同步更新</p>
+          <hr />
+          <p>
+            Pick a color:{' '}
+            <select value={color} onChange={(e) => setColor(e.target.value)}>
+              <option value='lightcoral'>lightcoral</option>
+              <option value='midnightblue'>midnightblue</option>
+              <option value='rebeccapurple'>rebeccapurple</option>
+            </select>
+          </p>
+          <Clock color={color} time={time.toLocaleTimeString()} />
+        </div>
+      </ChallengeLayout>
+      <p>官網提供的另一種解法：</p>
+      <ChallengeIFrame title='serene-butterfly-vhzjjk' />
+    </>
   );
 }
