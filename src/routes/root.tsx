@@ -38,6 +38,7 @@ import {
   RootLayout,
 } from '../layouts';
 import NotFound from '../views/NotFound';
+import TodoListUseReducer from '../views/TodoListUseReducer';
 import {
   Ch01_Sec01_challenges,
   Ch01_Sec02_challenges,
@@ -83,6 +84,10 @@ const router = createBrowserRouter(
       path: '/',
       element: <RootLayout />,
       children: [
+        {
+          path: 'use-reducer',
+          element: <TodoListUseReducer />,
+        },
         {
           // path: '', 等同 index: true,
           index: true, //  ' / === /ch01'
