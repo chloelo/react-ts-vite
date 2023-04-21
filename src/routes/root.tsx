@@ -84,10 +84,7 @@ const router = createBrowserRouter(
       path: '/',
       element: <RootLayout />,
       children: [
-        {
-          path: 'use-reducer',
-          element: <TodoListUseReducer />,
-        },
+        
         {
           // path: '', 等同 index: true,
           index: true, //  ' / === /ch01'
@@ -282,6 +279,10 @@ const router = createBrowserRouter(
               children: [...Ch04_Sec08_challenges],
             },
           ],
+        },
+        {
+          path: 'use-reducer',
+          element: <TodoListUseReducer />,
         },
         {
           path: '*',

@@ -1,12 +1,22 @@
+import { useRef } from 'react';
+
 import ChallengeLayout from '../../../ChallengeLayout';
 
 export default function App() {
+  const inputRef = useRef<HTMLInputElement>(null);
+  function handleClick() {
+    inputRef.current!.focus()
+  }
   const challenge = (
     <>
-      <p>說明待完成，之後補上</p>
+      <p>點了 search 按鈕，input 要 focus</p>
     </>
   );
-  const ans = <p>說明待完成，之後補上</p>;
+  const ans = (
+    <>
+      <p>input 加上 ref</p>
+    </>
+  );
   return (
     <>
       <ChallengeLayout
@@ -15,11 +25,16 @@ export default function App() {
         challengeIdx={1}
         challengeTxt={challenge}
         answer={ans}
-        challengeIFrameTitle='stoic-golick-x0vpod'
-        solutionIFrameTitle='vibrant-rhodes-gkinsn'
+        challengeIFrameTitle='gifted-cannon-zv288m'
+        solutionIFrameTitle='fancy-hooks-qrnur0'
       >
         <>
-          <div>顯示挑戰 iframe 未同步更新</div>
+          <nav>
+            <button className='block mb-3' onClick={handleClick}>
+              Search
+            </button>
+          </nav>
+          <input placeholder='Looking for something?' ref={inputRef} />
         </>
       </ChallengeLayout>
     </>
